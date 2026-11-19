@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">The complete trophy guide and tracker — every trophy, cited sources, a roadmap to the platinum, and the one trophy you can miss.</p>
+  </div>
+  <div class="overall" id="overall" aria-live="polite">
+    <div class="overall-num"><span id="overall-pct">0%</span><span class="overall-label">of the platinum</span></div>
+    <div class="overall-bar"><div id="overall-fill"></div></div>
+    <p id="overall-text">0 of 55 trophies earned</p>
+    <p class="overall-grades" id="overall-grades"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="tracker" id="tab-tracker">Tracker</button>
+  <button type="button" class="tab" data-view="roadmap" id="tab-roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missable" id="tab-missable">Missable Timeline</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view active">
+    <div class="controls">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or mission…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kind-filter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="side">Side quests</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="robbery">Robberies</option>
+          <option value="misc">One-offs &amp; secrets</option>
+          <option value="platinum">Platinum</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sort">
+          <option value="roadmap">Roadmap order</option>
+          <option value="grade">Grade</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+      <button id="export-btn" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="import-file" type="file" accept="application/json,.json"></label>
+    </div>
+
+    <div class="kind-bars" id="kind-bars" aria-label="Progress by kind"></div>
+    <p class="import-status" id="import-status" role="status"></p>
+
+    <div class="tracker-grid">
+      <div class="list-col">
+        <p class="list-count" id="list-count"></p>
+        <ul class="trophy-list" id="list"></ul>
+      </div>
+      <aside class="detail-col" id="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view">
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-intro">Play in this order. The story takes 60–80 hours (PowerPyx); the 100% cleanup after it takes about 100 more; side quests and stragglers about 10. One playthrough is enough — there is free roam after the story, no mission replay and no New Game+.</p>
+    <div id="roadmap"></div>
+  </section>
+
+  <section id="view-missable" class="view">
+    <h2>Missable timeline</h2>
+    <p class="section-intro">Only one trophy can be missed, and only in Chapter 1. Everything else stays available in free roam after the story — but there is no mission replay, so keep a manual save at the start and end of every chapter (15 manual slots).</p>
+    <div id="missable-timeline"></div>
+    <div class="save-advice">
+      <h3>Save habits that protect the platinum</h3>
+      <ul>
+        <li>Keep a manual save at the start of each chapter and one before the final mission.</li>
+        <li>Do the Chapter 1 meditation the morning after Down to Earth — it never comes back.</li>
+        <li>Cheats disable trophies and saving, so keep them off on your trophy save.</li>
+        <li>Optional missions with black icons and pink letters can disappear after a while — they do not matter for trophies, but do them when they appear anyway.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Names, descriptions and grades are the official ones as PlayStation publishes them. Guides are written for this entry, in the author's own words, from the sources named beside each trophy — mainly PowerPyx's post-release guide, cross-checked against GTABase and AlcastHQ. Two trophies (Bad Luck, I Guess and Ten Pin) were still unconfirmed by every guide on 2026-11-20 and are marked as such, with the best lead available.</p>
+  <p>Works fully offline. Progress is saved in your browser (localStorage) and never leaves it. Difficulty 4/10, about 200 hours to platinum (PowerPyx); 250+ hours (Push Square).</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
